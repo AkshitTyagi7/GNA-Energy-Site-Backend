@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
+    'sslserver',  # Add this line
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # CORS configuration
 CORS_ALLOW_ALL_ORIGINS = True
+
+# SSL settings
+SECURE_SSL_REDIRECT = True
+
+# Paths to your SSL certificate and key files
+SSL_CERTIFICATE_PATH = BASE_DIR / 'path_to_your_certificate.crt'
+SSL_KEY_PATH = BASE_DIR / 'path_to_your_private.key'
+
+# Ensure these files exist and are correctly referenced
