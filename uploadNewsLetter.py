@@ -10,7 +10,7 @@ django.setup()
 
 from newsletter.models import Newsletter
 
-data_folder = Path('newsletter_20th')
+data_folder = Path('newsletter_data')
 Newsletter.objects.all().delete()
 for pdf_file in data_folder.glob('*.pdf'):
     print(f'Processing {pdf_file.name}')
